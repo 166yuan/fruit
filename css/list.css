@@ -1,0 +1,10 @@
+/*css for productList*/
+.topbar-list{ background: #fff; font-size: .17rem; padding: .1rem;}
+.topbar-list-item{  float: left; margin-right: .2rem;  }
+.topbar-list-item >a{  color: #a5a9a7; text-decoration: none; }
+.topbar-list-item >a.active{ color: #17ca56 }
+.product-list-item{ background: #fff;padding: 0.12rem; }
+.image-wrap{ display: inline-block; border: 1px solid #ddd; }
+.product-detail{ display: inline-block; vertical-align: top;width: 60%;margin-left: .1rem;}
+.product-title { color: #444444;font-size: .12rem }
+.price{ color: #f57119 }

@@ -1,0 +1,62 @@
+/*css for productList*/
+.w100{ width: 100% !important; }
+.radio-large {  font-size: large; }
+.product-list{ max-height: 4.5rem;overflow: auto; }
+.product-list-item{ background: #fff;padding: 0.12rem; }
+.image-wrap{ display: inline-block; border: 1px solid #ddd; }
+.product-detail{ display: inline-block; vertical-align: top;width: 60%;margin-left: .1rem;}
+.product-title { color: #444444;font-size: .12rem }
+.product-box { display: inline-block; width: 90%;vertical-align: middle; }
+.price{ color: #f57119 }
+.price-big{ color: #f57119; font-size: large; }
+.description{ color: #a5a9a7;font-size: small; }
+.pay-info{ 
+	background: #fff; 
+ 	width: 100%;
+    height: .45rem;
+    padding-left: .06rem;
+}
+.hover-bottom{
+position: absolute;
+bottom: 10%;
+}
+.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+}
+.go-pay{ 
+	float: right;
+	background: #f57119;
+	color: #fff;
+	width: .9rem;
+	font-size: larger;
+	text-align: center;
+	line-height: .4rem;
+	height: inherit;
+}
+.total-price{
+	display: inline-block;
+	vertical-align: middle;
+	margin:.02rem 0 0 .1rem;
+}
+.order-info{
+	background: #fff;
+	margin-bottom: 0.085rem;
+	padding: .04rem .1rem;
+}
+.color-line{
+	border-top:#fff;
+	background: url(/images/line.png);
+}
+.order-info p{
+	padding: .07rem 0;
+	font-size: .14rem;
+}
+.info-list{
+	background: #fff;
+	margin-top: 0.085rem;
+	font-size: .14rem;
+}
+.info-list p{
+	padding: .1rem .1rem;
+}

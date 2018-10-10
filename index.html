@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>maker果园</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="indexCtrl">
+	<header class="clearfix">
+		<ul class="area-list hidden" id="area-list">
+			<li class="area-list-item" v-for="item in areaData" v-on:click="switchArea(item)"><a href="javascript:void(0)">{{item.name}}</a></li>
+		</ul>
+		<a href="#" class="pull-left h-left" id="locate" v-on:click="toggleList"> <i class="iconfont" style="color: #fff;font-size: large;">&#xe606;</i> <span id="location">{{areaName}}</span></a>
+		<a href="#" class="pull-right h-right" id="search"> <i class="iconfont" style="color: #fff;margin-right:.1rem;font-size: .2rem;">&#xe600;</i> </a>
+		<div class="search-area">
+			<a href="/"><img class="logo" src="images/logo.png"></a>
+		</div> 
+	</header>
+	<div class="content">
+		<div class="banner">
+			<div class="pics-scroll">
+				<a href="">
+					<img class="scroll_img" src="images/banner.png">
+				</a>
+			</div>
+		</div>
+		<div>
+			<ul class="section-list">
+				<li class="list0">
+					<a href="" class="line-right"><img src="images/icon-personal.png"></a>
+					<a href=""><img src="images/icon-setmenu.png"></a>
+				</li>
+				<li class="list1">
+					<div class="info-wrap">
+						<span class="section-title">专区频道</span>
+					</div>
+					<div class="list1-a2 line-top">
+						<div class="list1-a2-b1">
+							<a href="">
+								<img class="area_logo" src="images/icon-group.png">
+							</a>
+						</div>
+						<div class="list1-a2-b2 line-left">
+							<div class="list1-a2-b2-c1"> 
+								<a href="">
+									<img class="area_logo" src="images/icon-bargarn.png">
+								</a>
+							</div>
+							<div class="list1-a2-b2-c2 line-top">
+								<a href=""><img class="area_logo" src="images/icon-newproduct.png"></a>
+								<a href="" class="line-left"><img class="area_logo" src="images/icon-directing.png"></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="list2">
+					<div class="info-wrap">
+						<span class="area-title">首页推荐</span>
+					</div>
+					<div class="list2-a1">
+						<ul class="product-list">
+							<li class="product-list-item">
+								<img src="images/product1.png">
+								<div class="product-info">
+									<p class="product-title">内蒙古哈密瓜</p>
+									<p class="price-info">￥<span>123</span>/斤</p>
+									<p class="product-description">内门股哈密瓜，有曲艺故乡，相当棒</p>
+									<p><span class="rating-star allstar20"></span></p>
+								</div>
+							</li>
+							<li class="product-list-item">
+								<img src="images/product1.png">
+								<div class="product-info">
+									<p class="product-title">内蒙古哈密瓜</p>
+									<p class="price-info">￥<span>123</span>/斤</p>
+									<p class="product-description">内门股哈密瓜，有曲艺故乡，相当棒</p>
+									<p><span class="rating-star allstar20"></span></p>
+								</div>
+							</li>
+							<li class="product-list-item">
+								<img src="images/product1.png">
+								<div class="product-info">
+									<p class="product-title">内蒙古哈密瓜</p>
+									<p class="price-info">￥<span>123</span>/斤</p>
+									<p class="product-description">内门股哈密瓜，有曲艺故乡，相当棒</p>
+									<p><span class="rating-star allstar20"></span></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="list3">
+					<img class="slogan" src="images/slogan.png">
+				</li>
+			</ul>
+		</div>
+		<div class="tab">
+			<ul class="tab-list clearfix">
+				<li class="tab-list-item"><a href=""><i class="iconfont" style="font-size: .25rem;">&#xe60a;</i><p>首页</p></a></li>
+				<li class="tab-list-item"><a href=""><i class="iconfont" style="font-size: .25rem;">&#xe604;</i><p>商城</p></a></li>
+				<li class="tab-list-item"><a href=""><i class="iconfont" style="font-size: .25rem;">&#xe603;</i><p>购物车</p></a></li>
+				<li class="tab-list-item"><a href=""><i class="iconfont" style="font-size: .25rem;">&#xe609;</i><p>个人中心</p></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script data-main="js/app/index" src="js/lib/require.js"></script>
+</html>

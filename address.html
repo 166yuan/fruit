@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>maker果园-收货地址</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/base.css">
+    <style type="text/css">
+		.content{
+			text-align: center;
+		}
+		.md-input{
+			background: inherit;
+			border: none;
+			width: 70%;
+			font-size: .14rem;
+			margin-top: .12rem;
+			margin-left: .06rem;
+		}
+		.register-list{
+			background: #fff;
+			padding-bottom: .1rem;
+		}
+		.register-list-item{
+			padding: 0 .16rem;
+			text-align: left;
+			font-size: .14rem;
+		}
+		.register-item-component{
+			border-bottom: 1px solid #ddd;
+			padding-bottom: .05rem;
+		}
+		.btn-register{
+			margin-top: .16rem;
+		}
+		.mt12{
+			margin-top: .12rem;
+		}
+		.area-list{
+			background: #fff;
+		}
+		.area-list-item{
+			font-size: .16rem;
+			border-bottom: 1px solid #ddd;
+			padding: .06rem .1rem;
+		}
+		.area-list-item>a{
+			width: 100%;
+			display: block;
+			font-size: large;
+		}
+    </style>
+</head>
+<body>
+	<header>
+		<a href="" style="margin-left: .1rem;" class="pull-left"><i class="iconfont white">&#xe601;</i></a>
+		<span>添加收货地址</span>
+	</header>
+	<div class="content">
+		<div style="margin-top: .1rem;">
+			<ul class="register-list">
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>收货人姓名</span> <input type="text" class="md-input" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>手机号码</span> <input type="number" class="md-input" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component mt12">
+						<span>所在区域</span> <a href="javascript:void(0)" class="pull-right"><i class="iconfont">&#xe60d;</i> </a>
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>详细地址</span> <input type="number" class="md-input" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component mt12">
+						<span>设为默认地址</span> <a href="javascript:void(0)" class="link-bar pull-right"><i class="iconfont">&#xe607;</i></a>
+					</div>  
+				</li>
+			</ul>
+		</div>
+		<button class="btn-large btn-green btn-register" >添加</button>
+		<ul class="area-list hidden">
+			<li class="area-list-item"> <a href="#">华南农业大学</a></li>
+			<li class="area-list-item"> <a href="#">华南理工大学</a></li>
+		</ul>
+	</div>
+</body>
+</html>

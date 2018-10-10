@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>maker果园-登录</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/base.css">
+    <style type="text/css">
+		.content{
+			text-align: center;
+		}
+		.md-input{
+			background: inherit;
+			border: none;
+			width: 80%;
+			font-size: .14rem;
+			margin-top: .12rem;
+			margin-left: .06rem;
+		}
+		.register-list{
+			background: #fff;
+			padding-bottom: .1rem;
+		}
+		.register-list-item{
+			padding: 0 .16rem;
+			text-align: left;
+		}
+		.register-item-component{
+			border-bottom: 1px solid #ddd;
+			padding-bottom: .05rem;
+		}
+		.btn-register{
+			margin-top: .16rem;
+		}
+    </style>
+</head>
+<body>
+	<header>
+		<a href="" style="margin-left: .1rem;" class="pull-left"><i class="iconfont" style="color: #fff;">&#xe601;</i></a>
+		<span>登录</span>
+	</header>
+	<div class="content">
+		<div style="margin-top: .1rem;">
+			<ul class="register-list">
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>手机号码</span> <input type="number" class="md-input" id="phone" maxlength="13" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>密码</span> <input type="password" class="md-input" id="password" />
+					</div>
+				</li>
+			</ul>
+		</div>
+		<button class="btn-large btn-green btn-register" id="loginBtn">登录</button>
+		<button class="btn-large btn-white btn-register" >注册</button>
+	</div>
+</body>
+<script src="js/lib/require.js"></script>
+<script>
+	require.config({
+		baseUrl:'js',
+		paths:{
+			zepto:'lib/zepto.min',
+			vue:'lib/vue.min'
+		}
+	})
+	require(['zepto'], function($) {
+		var HOST = '112.74.129.253'
+		var loginUrl = 'http://'+HOST+'/show.php/Home/Auth/login'
+		$("#loginBtn").click(function (e) {
+			if($("#phone").val().trim()!=""&&$("#password").val().trim()!=""){
+				$.post(loginUrl,{
+					phone:$("#phone").val(),
+					password:$("#password").val()
+				},function (data) {
+					var result = JSON.parse(data)
+					if (result.status==0) {
+						switch(result.code) {
+							case 311:
+								alert("用户不存在")
+								break;
+							case 312:
+								alert("密码不存在")
+								break;	
+						}
+					}else{
+						alert("登录成功")
+						window.location.href="/index"
+					}
+				})
+			}else{
+				alert("亲，请完善登录信息哦")
+			}
+		})
+	});
+</script>
+</html>

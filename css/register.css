@@ -1,0 +1,81 @@
+
+		.content{
+			text-align: center;
+		}
+		.md-input{
+			background: inherit;
+			border: none;
+			width: 80%;
+			font-size: .14rem;
+			margin-top: .12rem;
+			margin-left: .06rem;
+		}
+		@media(max-width: 310px){
+			.md-input{
+				width: 76%;
+			}
+			.verifyCode{
+				width: 53% !important;
+			}
+		}
+		@media(max-width: 360px){
+			.md-input{
+				width: 75%;
+			}
+			.verifyCode{
+				width: 52% !important;
+			}
+		}
+		.register-list{
+			background: #fff;
+			padding-bottom: .1rem;
+		}
+		.register-list-item{
+			padding: 0 .16rem;
+			text-align: left;
+		}
+		.register-item-component{
+			border-bottom: 1px solid #ddd;
+			padding-bottom: .05rem;
+		}
+		.btn-register{
+			margin-top: .16rem;
+		}
+		.modal{
+			  position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: .1rem;
+    box-sizing: border-box;
+    top: 15%;
+    z-index: 1050;
+    background: #fff;
+    width: 80%;
+    text-align: center;
+    height: 25%;
+    border-radius: 3%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+		}
+		.modal>h1{
+
+		}
+		.modalback{
+			position: fixed;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    z-index: 1040;
+		    background-color:rgba(0,0,0,0.5);
+
+		}
+		.coupon{
+			color: red;
+			background: #feee5a;
+			padding: 10px 30px;
+			border-radius: 5px;
+			font-size: large;
+		}

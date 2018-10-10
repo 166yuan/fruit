@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>maker果园-注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:window.history.go(-1)" style="margin-left: .1rem;" class="pull-left"><i class="iconfont" style="color: #fff;">&#xe601;</i></a>
+		<span>注册</span>
+	</header>
+	<div class="content" id="registerArea">
+		<div style="margin-top: .1rem;">
+			<ul class="register-list" >
+				<form>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>昵称</span> <input type="text" pattern="^[^_][a-zA-Z0-9_\u4e00-\u9fa5]*[^_]$" v-on:blur="enableRegister" v-model='nickName' v-on:focus="reset('Name')" class="md-input" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>手机号码</span> <input type="number" maxlength=13 v-on:blur="enableRegister" style="{{errorCss}}" placeholder="{{errorPhone}}" v-model='phoneNumber' v-on:focus="reset('Phone')"  class="md-input" />
+					</div>
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>密码</span> <input type="password" v-on:focus="reset('Pass')" v-on:blur="enableRegister" v-model='password' class="md-input">
+					</div> 
+				</li>
+				<li class="register-list-item">
+					<div class="register-item-component">
+						<span>验证码</span> <input type="number" v-on:blur="enableRegister"  class="md-input verifyCode"  v-model='verifyCode' style="width: 58%" /> <button class="btn btn-green" @click="getCode($event)">获取验证码</button>
+					</div>  
+				</li>
+				</form>
+			</ul>
+		</div>
+		<button class="btn-large btn-green btn-register" @click="register" :disabled="unClick ? '' : disabled">注册</button>
+	</div>
+	<div class="modalback hidden" id="registerSuccess">
+		<div class="modal">
+			<h2>注册成功</h2>
+			<br>
+			<br>
+			<a class="coupon" href="https://h5.weidian.com/m/coupon/get.html?coupon_id=2571391&shop_id=211321570&wfr=shop_coupon_share&wfr=wx">马上领取优惠券</a>
+		</div>
+	</div>
+</body>
+<script data-main="js/app/register" src="js/lib/require.js"></script>
+</html>
